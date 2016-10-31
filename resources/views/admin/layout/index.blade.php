@@ -56,6 +56,7 @@
     <script src="admin_asset/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    @yield('script')
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
@@ -65,7 +66,7 @@
     </script>
     <script type="text/javascript" language="javascript" src="admin_asset/ckeditor/ckeditor.js" ></script>
 
-    @yield('script')
+    
 </body>
 
 </html>

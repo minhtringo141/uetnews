@@ -25,8 +25,8 @@ class SlideController extends Controller
       'ten' => 'required',
       'noidung' => 'required',
       ], [
-      'ten.required'=>'Bạn chưa nhập tên',
-      'noidung.required'=>'Bạn chưa nhập nội dung'
+      'ten.required'=>'Bạn chưa nhập tên !',
+      'noidung.required'=>'Bạn chưa nhập nội dung !'
       ]);
     $slide = new Slide;
     $slide->Ten = $request->ten;
@@ -66,8 +66,8 @@ class SlideController extends Controller
       'ten' => 'required',
       'noidung' => 'required',
       ], [
-      'ten.required'=>'Bạn chưa nhập tên',
-      'noidung.required'=>'Bạn chưa nhập nội dung'
+      'ten.required'=>'Bạn chưa nhập tên !',
+      'noidung.required'=>'Bạn chưa nhập nội dung !'
       ]);
     $slide = Slide::find($id);
     $slide->Ten = $request->ten;
