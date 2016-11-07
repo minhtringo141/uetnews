@@ -45,6 +45,7 @@ class TinTucController extends Controller
     $tintuc->TomTat = $request->tomtat;
     $tintuc->NoiDung = $request->noidung;
     $tintuc->SoLuotXem = 0;
+    $tintuc->NoiBat = $request->NoiBat;
 
     if($request->hasFile('hinh')){
       $file = $request->file('hinh');

@@ -75,7 +75,7 @@
 
 
                     <div class="form-group">
-                        <label>Category Status</label>
+                        <label>Nổi bật</label>
                         <label class="radio-inline">
                             <input name="NoiBat" value="0" checked="" type="radio">Không
                         </label>

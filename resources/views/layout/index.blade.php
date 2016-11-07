@@ -28,7 +28,7 @@
 </head>
 
 <body>
-
+    <div id="navbar"></div>
     <!-- Navigation -->
     @include('layout.header')
 
@@ -36,6 +36,8 @@
     @yield('content')
     <!-- end Page Content -->
 
+    <a href="#navbar"><img src="image/btt.png" style="width: 60px; height: 60px;position: fixed;right: 25px;bottom: 50px;z-index: 1
+    "></a>
     <!-- Footer -->
     @include('layout.footer')
     <!-- end Footer -->
@@ -45,6 +47,22 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/my.js"></script>
     @yield('script')
+    <script type="text/javascript">
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                      scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
 </body>
 
 </html>
