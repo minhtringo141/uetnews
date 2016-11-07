@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use App\TheLoai;
 use App\LoaiTin;
@@ -92,6 +93,32 @@ class UserController extends Controller
     return redirect('admin/user/danhsach')->with('thongbao', 'Bạn đã xóa người dùng thành công !');
   }
 
+  public function getDangnhapAdmin(){
+    return view('admin.login');
+  }
 
+  public function postDangnhapAdmin(Request $request){
+    $this->validate($request, [
+      'email'=>'required',
+      'password'=>'required|min:3|max:32'
+    ], [
+      'email.required'=>'Bạn chưa nhập email !',
+      'password.required'=>'Bạn chưa nhập password !',
+      'password.min'=>'Password không được ít hơn 3 ký tự !',
+      'password.max'=>'Password không được lớn hơn 32 ký tự !'
+    ]);
+    
+    if (Auth::attempt(['email'=>$request->email, 'password'=>$request->password]))
+    {
+      return redirect('admin/theloai/danhsach');
+    }else {
+      return redirect('admin/dangnhap')->with('loi','Đăng nhập không thành công !' );
+    }
+  }
+
+  public function getDangxuatAdmin(){
+    Auth::logout();
+    return redirect('admin/dangnhap');
+  }
 
 }

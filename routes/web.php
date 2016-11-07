@@ -15,11 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin/dangnhap', 'UserController@getDangnhapAdmin');
+Route::post('admin/dangnhap', 'UserController@postDangnhapAdmin');
+Route::get('admin/logout', 'UserController@getDangxuatAdmin');
+
 Route::get('test', function(){
   return view('admin.layout.index');
 });
 
-Route::group(['prefix'=>'admin'], function(){
+Route::group(['prefix'=>'admin', 'middleware'=>['adminLogin', 'web']], function(){
   Route::group(['prefix'=>'theloai'], function(){
     Route::get('danhsach', 'TheLoaiController@getDanhSach');
 
@@ -83,3 +87,7 @@ Route::group(['prefix'=>'admin'], function(){
   });
 
 });
+
+
+Route::get('trangchu','PagesController@trangchu');
+Route::get('lienhe', 'PagesController@lienhe');
