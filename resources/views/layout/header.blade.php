@@ -9,16 +9,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="color: #ffffff">UET</a>
+                <a class="navbar-brand" href="trangchu" style="color: #ffffff">UET</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#" style="color: #ffffff">Giới thiệu</a>
+                        <a href="gioithieu" style="color: #ffffff">Giới thiệu</a>
                     </li>
                     <li>
-                        <a href="#" style="color: #ffffff">Liên hệ</a>
+                        <a href="lienhe" style="color: #ffffff">Liên hệ</a>
                     </li>
                 </ul>
 
@@ -30,23 +30,25 @@
 			    </form>
 
 			    <ul class="nav navbar-nav pull-right">
-                    <li>
-                        <a href="#" style="color: #ffffff">Đăng ký</a>
-                    </li>
-                    <li>
-                        <a href="#" style="color: #ffffff">Đăng nhập</a>
-                    </li>
-                    <li>
-                    	<a>
-                    		<span class ="glyphicon glyphicon-user" style="color: #ffffff"></span>
-                    		Tester
-                    	</a>
-                    </li>
+                    @if(!Auth::user())
+                        <li>
+                            <a href="dangky" style="color: #ffffff">Đăng ký</a>
+                        </li>
+                        <li>
+                            <a href="dangnhap" style="color: #ffffff">Đăng nhập</a>
+                        </li>
+                    @else
+                        <li>
+                        	<a href="nguoidung" style="color: #ffffff">
+                        		<span class ="glyphicon glyphicon-user" style="color: #ffffff"></span>
+                        		{{Auth::user()->name}}
+                        	</a>
+                        </li>
 
-                    <li>
-                    	<a href="#" style="color: #ffffff">Đăng xuất</a>
-                    </li>
-
+                        <li>
+                        	<a href="dangxuat" style="color: #ffffff">Đăng xuất</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
 

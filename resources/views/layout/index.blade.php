@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>UET news @yield('title')</title>
-
+    <base href="{{asset('')}}">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <div id="navbar"></div>
+    <div id="navbar_on_top"></div>
     <!-- Navigation -->
     @include('layout.header')
 
@@ -36,7 +36,7 @@
     @yield('content')
     <!-- end Page Content -->
 
-    <a href="#navbar"><img src="image/btt.png" style="width: 60px; height: 60px;position: fixed;right: 25px;bottom: 50px;z-index: 1
+    <a href="#navbar_on_top"><img src="image/btt.png" style="width: 60px; height: 60px;position: fixed;right: 25px;bottom: 50px;z-index: 1
     "></a>
     <!-- Footer -->
     @include('layout.footer')
