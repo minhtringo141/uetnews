@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Content -->
-    <div class="container">
+    <div class="container chitiet" style="font-family: 'Noto Serif', serif;">
         <div class="row">
 
             <!-- Blog Post Content Column -->
@@ -76,7 +76,7 @@
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-3">
+            <div class="col-md-3" style="font-family: 'Noto Serif', serif;">
 
                 <div class="panel panel-default">
                     <div class="panel-heading"><b>Tin liên quan</b></div>
@@ -90,7 +90,7 @@
                                 </a>
                             </div>
                             <div class="col-md-7">
-                                <a href="#"><b>{{$tt->TieuDe}}</b></a>
+                                <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html"><b>{{$tt->TieuDe}}</b></a>
                             </div>
                             <p style="padding-left: 10px">{{$tt->TomTat}}</p>
                             <div class="break"></div>
@@ -112,7 +112,7 @@
                                 </a>
                             </div>
                             <div class="col-md-7">
-                                <a href="#"><b>{{$tt->TieuDe}}</b></a>
+                                <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html"><b>{{$tt->TieuDe}}</b></a>
                             </div>
                             <p style="padding-left: 10px">{{$tt->TomTat}}</p>
                             <div class="break"></div>

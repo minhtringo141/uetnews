@@ -1,4 +1,4 @@
- <div class="col-md-3">
+ <div class="col-md-3" style="font-family: 'Noto Serif', serif;">
                 <ul class="list-group" id="menu">
                     <li href="#" class="list-group-item menu1 active" style="background:#2c4762;">
                     	Menu

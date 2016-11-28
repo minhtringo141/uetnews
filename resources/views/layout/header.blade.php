@@ -1,5 +1,6 @@
 <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar" style="font-family: 'Noto Serif', serif;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header" >
@@ -15,18 +16,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="gioithieu" style="color: #ffffff">Giới thiệu</a>
+                        <a href="lienhe" style="color: #ffffff">Giới thiệu</a>
                     </li>
                     <li>
                         <a href="lienhe" style="color: #ffffff">Liên hệ</a>
                     </li>
                 </ul>
 
-                <form class="navbar-form navbar-left" role="search">
+                <form action="timkiem" method="post" class="navbar-form navbar-left" role="search">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
 			        <div class="form-group">
-			          <input type="text" class="form-control" placeholder="Search">
+			          <input type="text" name='tukhoa' class="form-control" placeholder="Tìm kiếm">
 			        </div>
-			        <button type="submit" class="btn btn-default" >Submit</button>
+			        <button type="submit" class="btn btn-default" >Tìm</button>
 			    </form>
 
 			    <ul class="nav navbar-nav pull-right">

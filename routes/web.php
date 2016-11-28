@@ -100,3 +100,8 @@ Route::get('dangxuat', 'PagesController@getDangxuat');
 Route::post('comment/{id}', 'CommentController@postComment');
 Route::get('nguoidung', 'PagesController@getNguoidung');
 Route::post('nguoidung', 'PagesController@postNguoidung');
+
+Route::get('dangky', 'PagesController@getDangky');
+Route::post('dangky', 'PagesController@postDangky');
+
+Route::post('timkiem', 'PagesController@timkiem');

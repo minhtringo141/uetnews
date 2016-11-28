@@ -1,3 +1,21 @@
+
+/*@font-face {
+    font-family: 'Noto Serif', serif;
+    src: url("../fonts/NotoSerif/NotoSerif-Regular.ttf");
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("../fonts/Raleway/Raleway-Medium.ttf");
+}
+
+@font-face {
+    font-family: Maitree;
+    src: url("../fonts/Maitree/Maitree-Regular.ttf");
+}
+*/
+
+
 .menu1 ul{
 	position: absolute;
 	z-index: 999;
@@ -60,3 +78,10 @@ background:#2c4762;
 
 
 
+.scrollToTop:hover{
+	text-decoration:none;
+}
+
+.chitiet {
+	font-family: 'Noto Serif', serif;
+}
