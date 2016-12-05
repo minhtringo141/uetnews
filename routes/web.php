@@ -105,3 +105,4 @@ Route::get('dangky', 'PagesController@getDangky');
 Route::post('dangky', 'PagesController@postDangky');
 
 Route::post('timkiem', 'PagesController@timkiem');
+Route::get('theloai/{id}', 'PagesController@getTheloai');

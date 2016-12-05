@@ -17,8 +17,10 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
-   
+   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Trirong:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sumana" rel="stylesheet">
     @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +31,7 @@
 
 </head>
 
-<body style="font-family: 'Noto Serif', serif;">
+<body style="font-family: 'Roboto Slab', serif; font-size: 1.5em; overflow-x: hidden;">
     
     <!-- Navigation -->
     @include('layout.header')

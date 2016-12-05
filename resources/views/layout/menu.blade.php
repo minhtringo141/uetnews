@@ -1,6 +1,6 @@
- <div class="col-md-3" style="font-family: 'Noto Serif', serif;">
+ <div class="col-md-3" style="font-family: 'Noto', sans-serif; font-size: 1.1em">
                 <ul class="list-group" id="menu">
-                    <li href="#" class="list-group-item menu1 active" style="background:#2c4762;">
+                    <li href="trangchu" class="list-group-item menu1 active" style="background:#2c4762;">
                     	Menu
                     </li>
                     @foreach($theloai as $tl)

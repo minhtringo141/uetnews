@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Content -->
-    <div class="container chitiet" style="font-family: 'Noto Serif', serif;">
+    <div class="container chitiet" style="font-family: 'Roboto Slab', serif; font-size: 1em">
         <div class="row">
 
             <!-- Blog Post Content Column -->
@@ -40,6 +40,11 @@
                     @if(session('thongbao'))
                         <div class="alert alert-success">
                           {{session('thongbao')}}
+                        </div>
+                    @endif
+                    @if(session('loi'))
+                        <div class="alert alert-danger">
+                          {{session('loi')}}
                         </div>
                     @endif
                     <h4>Viết bình luận ...<span class="glyphicon glyphicon-pencil"></span></h4>

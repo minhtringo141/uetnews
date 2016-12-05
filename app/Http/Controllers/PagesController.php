@@ -143,6 +143,12 @@ class PagesController extends Controller
       $tukhoa = $request->tukhoa;
       $tintuc = TinTuc::where('TieuDe', 'like', "%$tukhoa%")->orWhere('TomTat', 'like', "%$tukhoa%")->orWhere('NoiDung', 'like', "%$tukhoa%")->take(30)->paginate(5);
       return view('pages.timkiem', ['tintuc'=>$tintuc, 'tukhoa'=>$tukhoa]);
+    }
 
+    function getTheloai($id){
+      $theloai = TheLoai::find($id);
+      $ten = $theloai->Ten;
+      $loaitin = LoaiTin::where('idTheLoai', $id)->get();
+      return view('pages.theloai', ['loaitin'=>$loaitin, 'ten'=>$ten]);
     }
 }
